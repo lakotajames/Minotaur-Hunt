@@ -5,13 +5,21 @@ public class NetworkManager : MonoBehaviour {
 
 	public GameObject standbyCamera;
 	public PlayerSpawn playerSpawn;
+	public bool offlinemode;
 	// Use this for initialization
 	void Start () {
+		if (offlinemode) {
+			PhotonNetwork.offlineMode = true;
+		}
 		Connect ();
 	}
 
 	void Connect(){
+		if (offlinemode){
+			OnJoinedLobby();
+		}else{
 		PhotonNetwork.ConnectUsingSettings ("ALPHA 0.0.1");
+		}
 	}
 
 	void OnGUI(){
