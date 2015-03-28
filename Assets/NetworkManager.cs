@@ -45,7 +45,7 @@ public class NetworkManager : MonoBehaviour {
 		MyPlayerGO.GetComponent<CharacterController>().enabled = true;
 		(MyPlayerGO.GetComponent ("SimpleMouseRotator") as MonoBehaviour).enabled = true;
 		((MonoBehaviour)MyPlayerGO.GetComponent("PlayerShoot")).enabled = true;
-		((MonoBehaviour)MyPlayerGO.GetComponentInChildren("SimpleMouseRotator")).enabled = true;
+		MyPlayerGO.transform.FindChild("FirstPersonCharacter").gameObject.SetActive(true);
 		MyPlayerGO.GetComponentInChildren<Camera> ().enabled = true;
 		MyPlayerGO.GetComponentInChildren<AudioListener> ().enabled = true;
 	}
