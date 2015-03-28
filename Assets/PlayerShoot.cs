@@ -47,7 +47,7 @@ public class PlayerShoot : MonoBehaviour {
 			// Once we reach here, hitTransform may not be the hitTransform we started with!
 			
 			if(h != null) {
-				h.GetComponent<PhotonView>().RPC("TakeDamage", PhotonTargets.All,damage);
+				h.GetComponent<PhotonView>().RPC("TakeDamage", PhotonTargets.AllBufferedViaServer,damage);
 				//h.TakeDamage( damage );
 			}
 			
