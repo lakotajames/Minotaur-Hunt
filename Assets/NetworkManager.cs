@@ -4,13 +4,17 @@ using System.Collections;
 public class NetworkManager : MonoBehaviour {
 
 	public GameObject standbyCamera;
-	public PlayerSpawn playerSpawn;
+	private PlayerSpawn playerSpawn;
+	private GameManager gm;
 	public bool offlinemode;
+	public int seed;
 	// Use this for initialization
 	void Start () {
+		gm = GetComponent (GameManager);
 		if (offlinemode) {
 			PhotonNetwork.offlineMode = true;
 		}
+
 		Connect ();
 	}
 
@@ -36,6 +40,10 @@ public class NetworkManager : MonoBehaviour {
 	}
 
 	void OnJoinedRoom(){
+		if (PhotonNetwork.isMasterClient) {
+			seed = Random.seed;
+			yield return StartCoroutine(gm.BeginGame());
+		}
 		SpawnMyPlayer ();
 	}
 	void SpawnMyPlayer(){
