@@ -14,15 +14,23 @@ public class PlayerMovement : MonoBehaviour {
 	CharacterController cc;
 	Animator anim;
 
+	private Camera m_Camera;
+	private Vector3 m_OriginalCameraPosition;
+	
+	[SerializeField] private MouseLook m_MouseLook;
+
 
 	// Use this for initialization
 	void Start () {
 		cc = GetComponent<CharacterController> ();
 		anim = GetComponent <Animator>();
+		m_Camera = GetComponentInChildren<Camera>();
+		m_MouseLook.Init(transform , m_Camera.transform);
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		RotateView ();
 		direction = transform.rotation * new Vector3 (Input.GetAxis ("Horizontal"), 0, Input.GetAxis ("Vertical"));
 
 		if(direction.magnitude > 1f){
@@ -50,6 +58,10 @@ public class PlayerMovement : MonoBehaviour {
 		dist.y = verticalVelocity;
 		cc.Move (dist);
 	
+	}
+	private void RotateView(){
+		m_MouseLook.LookRotation (transform, m_Camera.transform);
+
 	}
 
 }

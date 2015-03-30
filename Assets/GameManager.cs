@@ -21,9 +21,9 @@ public class GameManager : MonoBehaviour {
 	}
 
 
-	public IEnumerator BeginGame() {
+	public void BeginGame() {
 		mazeInstance = Instantiate (mazePrefab) as Maze;
-		yield return StartCoroutine(mazeInstance.Generate ());
+		mazeInstance.Generate ();
 		MazeCell startcell = mazeInstance.GetCell (mazeInstance.RandomCoordinates);
 		spawnInstance = Instantiate (spawnPrefab, startcell.transform.position, startcell.transform.rotation) as PlayerSpawn;
 	}

@@ -1366,7 +1366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cadd54e4832aeef4b9359f44cbe335cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationRange: {x: 70, y: 70}
+  rotationRange: {x: 90, y: 360}
   rotationSpeed: 10
   dampingTime: .200000003
   autoZeroVerticalOnMobile: 1
@@ -1421,6 +1421,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   jumpSpeed: 6
+  m_MouseLook:
+    XSensitivity: 2
+    YSensitivity: 2
+    clampVerticalRotation: 1
+    MinimumX: -90
+    MaximumX: 90
+    smooth: 0
+    smoothTime: 5
 --- !u!137 &13719446
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

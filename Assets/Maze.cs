@@ -38,7 +38,7 @@ public class Maze : MonoBehaviour {
 		return cells [coordinates.x, coordinates.z];
 	}
 
-	public IEnumerator Generate(){
+	public void Generate(){
 		cells = new MazeCell[size.x, size.z];
 		List<MazeCell> activeCells = new List<MazeCell>();
 		DoFirstGenerationStep(activeCells);

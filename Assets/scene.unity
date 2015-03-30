@@ -116,8 +116,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   standbyCamera: {fileID: 1519627625}
-  playerSpawn: {fileID: 0}
   offlinemode: 1
+  seed: 0
 --- !u!4 &8412590
 Transform:
   m_ObjectHideFlags: 0
@@ -142,56 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mazePrefab: {fileID: 11478806, guid: cceba9106b6c1cf4bb424c68081e443a, type: 2}
---- !u!1001 &494012985
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 431624, guid: 7569839557e8fc74fa2e9717e5f51903, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 431624, guid: 7569839557e8fc74fa2e9717e5f51903, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 431624, guid: 7569839557e8fc74fa2e9717e5f51903, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 3.24000001
-      objectReference: {fileID: 0}
-    - target: {fileID: 431624, guid: 7569839557e8fc74fa2e9717e5f51903, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 431624, guid: 7569839557e8fc74fa2e9717e5f51903, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 431624, guid: 7569839557e8fc74fa2e9717e5f51903, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 431624, guid: 7569839557e8fc74fa2e9717e5f51903, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 431624, guid: 7569839557e8fc74fa2e9717e5f51903, type: 2}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 11489716, guid: 7569839557e8fc74fa2e9717e5f51903, type: 2}
-      propertyPath: viewIdField
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11489716, guid: 7569839557e8fc74fa2e9717e5f51903, type: 2}
-      propertyPath: instantiationId
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 7569839557e8fc74fa2e9717e5f51903, type: 2}
-  m_IsPrefabParent: 0
+  spawnPrefab: {fileID: 11418434, guid: 09dd5582e15369f448fe1df89215aba9, type: 2}
 --- !u!1 &540832943
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,7 +173,7 @@ RectTransform:
   m_Children:
   - {fileID: 1749467220}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
