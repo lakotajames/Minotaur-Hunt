@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: ff8dc016aab43294ba6d723085b266d4
-timeCreated: 1427240993
+timeCreated: 1427767633
 licenseType: Free
 SubstanceImporter:
   serializedVersion: 5
@@ -35,14 +35,14 @@ SubstanceImporter:
         texture: {instanceID: 0}
     - name: Emboss
       value:
-        scalar[0]: 5
+        scalar[0]: 5.69999981
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
         texture: {instanceID: 0}
     - name: Angle
       value:
-        scalar[0]: .125
+        scalar[0]: .151999995
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -70,14 +70,14 @@ SubstanceImporter:
         texture: {instanceID: 0}
     - name: Contrast
       value:
-        scalar[0]: 0
+        scalar[0]: .0500000007
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
         texture: {instanceID: 0}
     - name: Normal
       value:
-        scalar[0]: .5
+        scalar[0]: .493000001
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -98,7 +98,7 @@ SubstanceImporter:
         texture: {instanceID: 0}
     - name: Rock_Edges
       value:
-        scalar[0]: .5
+        scalar[0]: .479000002
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -141,7 +141,7 @@ SubstanceImporter:
     materialInformation:
       serializedVersion: 5
       offset: {x: 0, y: 0}
-      scale: {x: 50, y: 50}
+      scale: {x: 1, y: 2}
       generateMipmaps: 1
       generateAllOutputs: 0
       animationUpdateRate: 0
@@ -153,14 +153,14 @@ SubstanceImporter:
             name: _MainTex
           second:
             texture: {instanceID: 0}
-            scale: {x: 50, y: 50}
+            scale: {x: 1, y: 2}
             offset: {x: 0, y: 0}
         data:
           first:
             name: _BumpMap
           second:
             texture: {instanceID: 0}
-            scale: {x: 50, y: 5}
+            scale: {x: 1, y: 1}
             offset: {x: 0, y: 0}
         data:
           first:
@@ -174,7 +174,7 @@ SubstanceImporter:
             name: _ParallaxMap
           second:
             texture: {instanceID: 0}
-            scale: {x: 50, y: 5}
+            scale: {x: 1, y: 1}
             offset: {x: 0, y: 0}
         data:
           first:
@@ -188,7 +188,7 @@ SubstanceImporter:
             name: _EmissionMap
           second:
             texture: {instanceID: 0}
-            scale: {x: 50, y: 50}
+            scale: {x: 1, y: 2}
             offset: {x: 0, y: 0}
         data:
           first:

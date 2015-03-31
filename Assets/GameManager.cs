@@ -20,17 +20,19 @@ public class GameManager : MonoBehaviour {
 		return spawnInstance;
 	}
 
-
-	public void BeginGame() {
+	[RPC]
+	public void BeginGame(int seed) {
+		Random.seed = seed;
 		mazeInstance = Instantiate (mazePrefab) as Maze;
 		mazeInstance.Generate ();
 		MazeCell startcell = mazeInstance.GetCell (mazeInstance.RandomCoordinates);
 		spawnInstance = Instantiate (spawnPrefab, startcell.transform.position, startcell.transform.rotation) as PlayerSpawn;
+		GetComponent<NetworkManager>().SpawnMyPlayer ();
 	}
 
 	private void RestartGame() {
-		Destroy (mazeInstance.gameObject);
-		BeginGame ();
+//		Destroy (mazeInstance.gameObject);
+//		BeginGame ();
 	}
 	public Maze GetMaze(){
 		return mazeInstance;

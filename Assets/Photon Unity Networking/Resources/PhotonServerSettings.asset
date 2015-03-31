@@ -29,4 +29,5 @@ MonoBehaviour:
   - PunRespawn
   - RequestForPickupTimes
   - TakeDamage
+  - BeginGame
   DisableAutoOpenWizard: 0
