@@ -27,10 +27,16 @@ public class ConnectButton : MonoBehaviour {
 
 	void OnJoinedLobby(){
 		Debug.Log ("LOBBY");
-		connectButton.GetComponent<Canvas>().enabled = false;
-		roomList.GetComponent<Canvas> ().enabled = true;
-		roomText.text = PhotonNetwork.GetRoomList ().ToString();
-
+		//connectButton.GetComponent<Canvas>().enabled = false;
+		
+		PhotonNetwork.JoinRandomRoom ();
+	}
+	
+	void OnPhotonRandomJoinFailed(){
+		PhotonNetwork.CreateRoom (null);
+	}
+	void OnJoinedRoom(){
+		PhotonNetwork.LoadLevel ("Lobby");
 	}
 
 
