@@ -32,6 +32,7 @@ namespace UnityStandardAssets.Utility
         private void Start()
         {
             m_OriginalRotation = transform.localRotation;
+			Cursor.lockState = CursorLockMode.Locked;
         }
 
 
