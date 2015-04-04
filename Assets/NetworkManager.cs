@@ -9,8 +9,10 @@ public class NetworkManager : MonoBehaviour {
 	public bool offlinemode;
 	public int seed;
 	private PhotonView pv;
+	private PauseMenu pauseMenu;
 	// Use this for initialization
 	void Start () {
+		pauseMenu = GetComponent <PauseMenu>();
 		gm = GetComponent <GameManager>();
 		pv = GetComponent<PhotonView> ();
 		if (PhotonNetwork.isMasterClient) {
@@ -30,6 +32,7 @@ public class NetworkManager : MonoBehaviour {
 		PlayerSpawn mySpawn = gm.GetSpawn();
 		GameObject MyPlayerGO = PhotonNetwork.Instantiate ("PlayerController", mySpawn.transform.position, mySpawn.transform.rotation, 0);
 		standbyCamera.SetActive (false);
+		pauseMenu.GetPlayerObject (MyPlayerGO);
 		(MyPlayerGO.GetComponent ("PlayerMovement") as MonoBehaviour).enabled = true;
 		MyPlayerGO.GetComponent<CharacterController>().enabled = true;
 		((MonoBehaviour)MyPlayerGO.GetComponent("PlayerShoot")).enabled = true;

@@ -10,9 +10,12 @@ public class Maze : MonoBehaviour {
 
 	public MazeWall wallPrefab;
 
+	public MazeWall wallTorchPrefab;
+
 	public IntVector2 size;
 	
 	private MazeCell[,] cells;
+
 
 	// Use this for initialization
 	void Start () {
@@ -94,7 +97,8 @@ public class Maze : MonoBehaviour {
 		passage.Initialize (otherCell, cell, direction.GetOpposite());
 	}
 	private void CreateWall (MazeCell cell, MazeCell otherCell, MazeDirection direction) {
-		MazeWall wall = Instantiate(wallPrefab) as MazeWall;
+		MazeWall wall = Instantiate (wallPrefab) as MazeWall;
+		
 		wall.Initialize(cell, otherCell, direction);
 		if (otherCell != null) {
 			wall = Instantiate(wallPrefab) as MazeWall;

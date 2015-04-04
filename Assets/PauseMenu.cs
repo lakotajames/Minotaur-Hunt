@@ -4,6 +4,7 @@ using System.Collections;
 public class PauseMenu : MonoBehaviour {
 	public Canvas PauseMenuCanvas;
 	public Canvas Crosshair;
+	private GameObject PlayerObject;
 
 	public void ResumeButtonClick(){
 		PauseMenuCanvas.enabled = false;
@@ -24,6 +25,18 @@ public class PauseMenu : MonoBehaviour {
 			PauseMenuCanvas.enabled = ! PauseMenuCanvas.enabled;
 			Crosshair.enabled = ! Crosshair.enabled;
 			Cursor.visible =! Cursor.visible;
+			if (PlayerObject != null){
+//				(PlayerObject.GetComponent("SimpleMouseRotator") as MonoBehaviour).enabled =! (PlayerObject.GetComponent("SimpleMouseRotator") as MonoBehaviour).enabled;
+			}
+		}
+	}
+	public void GetPlayerObject(GameObject PO){
+		PlayerObject = PO;
+	}
+
+	public void MouseSliderChanged(){
+		if (PlayerObject != null) {
+//			(PlayerObject.GetComponent("SimpleMouseRotator") as MonoBehaviour)
 		}
 	}
 }

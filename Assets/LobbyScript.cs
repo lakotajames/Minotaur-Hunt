@@ -32,7 +32,6 @@ public class LobbyScript : MonoBehaviour {
 			}
 		}else{
 			if (PhotonNetwork.isMasterClient && !MasterLobby.enabled == false) {
-				Debug.Log(MasterLobby.enabled);
 				MasterLobby.enabled = true;
 			}
 		}

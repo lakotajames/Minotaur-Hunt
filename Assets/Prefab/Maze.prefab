@@ -42,9 +42,11 @@ MonoBehaviour:
   cellPrefab: {fileID: 11409304, guid: a77c9963933014f40a231c668aae19fe, type: 2}
   passagePrefab: {fileID: 11495150, guid: c58f937708490494683339315cbaadc3, type: 2}
   wallPrefab: {fileID: 11468054, guid: 924bb4065a2e25a4cb89d0d409ed4f0a, type: 2}
+  wallTorchPrefab: {fileID: 11446188, guid: e206358b6f470e44982584cb331a4652, type: 2}
   size:
     x: 30
     z: 30
+  WallToTorchRatio: 10
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
