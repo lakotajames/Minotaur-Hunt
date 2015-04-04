@@ -39,5 +39,8 @@ public class ConnectButton : MonoBehaviour {
 		PhotonNetwork.LoadLevel ("Lobby");
 	}
 
+	public void ExitButtonClick(){
+		Application.Quit();
+	}
 
 }
