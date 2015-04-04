@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour {
 	private PlayerSpawn spawnInstance;
 	public Torchelight torchPrefab;
 	public int numTorches;
-	private Torchelight[] torches;
+	private GameObject[] torches;
 	// Use this for initialization
 	void Start () {
 		//BeginGame ();
@@ -33,8 +33,9 @@ public class GameManager : MonoBehaviour {
 
 
 		for (int x =1; x>numTorches; x++) {
+			Debug.Log("Torch Genned");
 			MazeCell torch = mazeInstance.GetCell(mazeInstance.RandomCoordinates);
-			torches[x] = Instantiate(torchPrefab , torch.transform.position, torch.transform.rotation) as Torchelight;
+			torches[x] = Instantiate(torchPrefab , torch.transform.position, torch.transform.rotation) as GameObject;
 		}
 
 		GetComponent<NetworkManager>().SpawnMyPlayer ();
